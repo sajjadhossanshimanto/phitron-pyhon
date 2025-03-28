@@ -1,3 +1,5 @@
+# https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/P
+
 n = int(input())
 nums = list(map(int, input().split()))
 
