@@ -14,10 +14,11 @@ class Bus:
     def book_seat(self):
         " books if seats available "
         if self.available_seats():
+            print(f"[+] ticket booking Sucessful for the bus {self.number}. Please pay {self.ticket_trice}৳ to the counter")
             self.booked_seats += 1
             return True
         else:
-            print("[!] Seat not available. ")
+            print("[!] Bus is Full. ")
         return False
 
     def __repr__(self):
@@ -129,7 +130,7 @@ while 1:
             choise = show_obtions(admin_option)
             if choise==0:
                 admin.add_bus(
-                    int_input("[-] Enter Bus number: "),
+                    input("[-] Enter Bus number: "),
                     input("[-] Enter Route: "),
                     int_input("[-] Enter total seat number: ")
                 )
@@ -140,6 +141,7 @@ while 1:
                 bd_buses.show_passenger()
                 input("[-] Press Enter to continue..")
             elif choise==3:# logout
+                print("[+] Logout sucessfull")
                 break
     
     elif choise==1:
